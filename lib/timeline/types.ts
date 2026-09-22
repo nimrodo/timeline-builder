@@ -6,6 +6,7 @@ export interface Scene {
   body: string;
   tone: Tone;
   order: number;
+  createdBy: string;
 }
 
 export interface TimelineEvent {
@@ -14,6 +15,7 @@ export interface TimelineEvent {
   date: string;
   tone: Tone;
   order: number;
+  createdBy: string;
   scenes: Scene[];
 }
 
@@ -23,5 +25,6 @@ export interface Period {
   dateRangeLabel: string;
   tone: Tone;
   order: number;
+  createdBy: string;
   events: TimelineEvent[];
 }

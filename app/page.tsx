@@ -1,5 +1,4 @@
 import { TimelineBoard } from "@/components/timeline/TimelineBoard";
-import { mockPeriods } from "@/lib/timeline/mock-data";
 
 export default function Home() {
   return (
@@ -11,7 +10,7 @@ export default function Home() {
         </p>
       </header>
 
-      <TimelineBoard periods={mockPeriods} />
+      <TimelineBoard />
     </div>
   );
 }

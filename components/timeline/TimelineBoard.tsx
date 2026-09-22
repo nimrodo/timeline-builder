@@ -4,10 +4,14 @@ import { useState } from "react";
 import { Plus } from "lucide-react";
 import { PeriodSlide } from "./PeriodSlide";
 import { SceneDetail } from "./SceneDetail";
-import type { Period, Scene } from "@/lib/timeline/types";
+import { useTimelineStore } from "@/lib/timeline/useTimelineStore";
+import type { Scene } from "@/lib/timeline/types";
 
-export function TimelineBoard({ periods }: { periods: Period[] }) {
+export function TimelineBoard() {
+  const { periods, isLoading } = useTimelineStore();
   const [activeScene, setActiveScene] = useState<Scene | null>(null);
+
+  if (isLoading) return null;
 
   return (
     <>
